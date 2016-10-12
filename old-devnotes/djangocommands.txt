@@ -1,0 +1,36 @@
+Django
+
+Link Documentazione: https://docs.djangoproject.com/en/1.7/
+Form Fields: https://docs.djangoproject.com/en/1.7/ref/forms/fields/
+
+django-admin.py startproject nomeprogetto
+
+py manage.py migrate: installa le tabelle sul db
+
+py manage.py runserver: avvia il server
+
+python manage.py runserver 8080: avvia il server sulla 8080
+
+python manage.py runserver 0.0.0.0:8000
+
+python manage.py startapp nomeapp: crea una app
+
+python manage.py makemigrations nomeapp: migra il model, dal codice al database django (non sql) (eventualmente aggiornando se già fatto)
+
+python manage.py sqlmigrate nomeapp numeromigrazione >> nomefile.sql : estrae nel file le istruzioni sql per generare le tabelle sul database sql
+
+python manage.py check : controlla sia tutto a posto
+
+python manage.py migrate: (come sopra) prende le eventuali numeromigrazione non ancora girate sul sql e crea o aggiorna le tabelle
+
+3step per il model: 
+	editare app/model.py
+	python manage.py makemigrations app
+	python manage.py migrate
+
+python manage.py shell: avvia una shell python con django inizializzato
+
+
+
+
+

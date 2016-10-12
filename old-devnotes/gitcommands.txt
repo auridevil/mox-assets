@@ -1,0 +1,55 @@
+git init : inizializza il db locale
+git status: stato del repository (solo locale?) del git
+git add: aggiunge un file allo staging (non lo committa) ma lo lascia in "staging"
+
+i file in staging possono essere diversi da quelli su filesystem
+
+git commit: committa i file in staging sul repo (i per insert, esc poi :wq per uscire da VI)
+
+git commit -m "commento inline per il commit"
+
+git commit -a -m "commento inline": committa senza passare dallo staging e inserisce il commento inline
+
+git log: storia dei commit
+
+git add . :aggiunge tutti i file (nella directory corrente, credo)
+
+git add *.ext : aggiunge tutti i file i cui nomi rispondono all'espressione regolare
+
+touch .gitignore : crea il file .gitignore nella cartella corrente. editando il .gitignore si possono aggiungere i nomi dei file che non vogliamo che git gestisca (e.g. i file di log, i file di 
+		   configurazione dell'ide, i file di build). attenzione che il file .gitignore va committato, esattamente come gli altri file
+
+git branch nomebranch : crea un nuovo branch. in git si tende a creare sempre un branch locale per le proprie modifiche
+
+git checkout nomebranch: passa ad utilizzare il branch nomebranch
+
+git checkout master: torna ad utilizzare il master (il branch principale)
+
+git branch -a : mostra i branch sul server e in locale
+
+git branch -r : mostra i branch sul server
+
+git branch: mostra i branch
+
+git merge NomeBranch: fa il merge del branch NomeBranch nel branch corrente, se ci sono dei conflitti edita il file e bisogna correggerli a  mano (inidicato nel file editato SOPRA - HEAD ossia il 
+ 		      branch corrente, sotto il branch che si sta cercando di mergiare)
+
+git stash : aggiunge i file sul branch (su cui è stato fatto un add) allo stash
+
+git stash apply: riprende i file sul branch salvati nello stash
+
+git remote: lista i repo remoti configurati sul git
+
+git clone "url" (e.g. https://github.com/vpulim/node-soap.git) : crea il clone locale del repository indicato (completo di storia dei commit etc)
+
+git remote -v: lista i repo remoti configurati sul git con gli url
+
+git fetch origin: prende tutti gli aggiornamenti dal server remoto
+
+git pull origin: prende tutti gli aggiornamnenti e fa il merge
+
+git push origin master: prende gli aggiornmaneti (aggiunti) sul master locale e li carica sul server
+
+
+
+tutorial: https://www.youtube.com/watch?v=Y8XZQO1n_7c  
