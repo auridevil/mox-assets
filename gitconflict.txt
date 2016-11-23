@@ -1,0 +1,12 @@
+resolve a conflict for a pr
+
+cd repo
+git checkout dest-branch
+git pull origin dest-branch
+git checkout src-branch
+git pull origin src-branch
+git merge dest-branch
+"correct all files"
+git add corrected-files
+git commit -m "merge"
+git push origin src-branch
